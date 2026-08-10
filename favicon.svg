@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="14" fill="#0b1215"/>
+  <rect x="1.5" y="1.5" width="61" height="61" rx="12.5" fill="none" stroke="#1e3a33" stroke-width="2"/>
+  <text x="16" y="45"
+        font-family="JetBrains Mono, Consolas, ui-monospace, monospace"
+        font-size="38" font-weight="700" fill="#e7efea">R</text>
+  <rect x="41" y="18" width="9" height="27" fill="#29e07f"/>
+</svg>
