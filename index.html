@@ -102,7 +102,7 @@
   .chip{font-family:var(--mono);font-size:12px;padding:5px 11px;border-radius:20px;background:rgba(41,224,127,.07);border:1px solid var(--line-2);color:var(--txt-2)}
   .stack-card.learn .chip{background:rgba(160,180,175,.05);color:var(--txt-3)}
 
-  .proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+  .proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;align-items:start}
   .card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px;display:flex;flex-direction:column;transition:.25s;position:relative;overflow:hidden}
   .card:hover{border-color:var(--line-2);transform:translateY(-3px)}
   .card::after{content:'';position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,transparent,var(--green),transparent);opacity:0;transition:.25s}
@@ -138,6 +138,7 @@
     .menu-btn{display:block}
     section{padding:64px 0}
   }
+  .card-img{width:100%;border-radius:8px;border:1px solid #1c2a24;margin:14px 0 2px;display:block}
 </style>
 </head>
 <body>
@@ -378,12 +379,13 @@
       <article class="card">
         <div class="card-top">
           <h3 data-i18n="proj.p1t">Painel de Produção Industrial</h3>
-          <span class="tag dev" data-i18n="tag.dev">em desenvolvimento</span>
+          <span class="tag done" data-i18n="tag.done">concluído</span>
         </div>
-        <p data-i18n="proj.p1d">Pipeline completo de dados de produção: lê planilhas reais (e sujas), trata inconsistências, grava em banco e alimenta um dashboard com indicadores de chão de fábrica — produtividade por máquina, refugo, tempo de setup e cumprimento de prazo. Caso de uso: indústria gráfica.</p>
+        <img class="card-img" src="img_painel_producao.png" alt="Painel de Produção Industrial" loading="lazy">
+        <p data-i18n="proj.p1d">Lê planilhas de produção com a sujeira que aparece de verdade — cabeçalho fora de lugar, datas em quatro formatos, nomes de máquina divergentes, duplicatas —, valida, grava em banco e gera painel, relatório Excel e CSV auditável. Última execução: 736 linhas lidas, 678 gravadas, 5,71% rejeitadas com motivo.</p>
         <div class="chips"><span class="chip">Python</span><span class="chip">pandas</span><span class="chip">SQLite</span><span class="chip">matplotlib
-</span></div>
-        <div class="card-links"><span data-i18n="proj.soon">repositório em breve</span></div>
+</span><span class="chip">pytest</span></div>
+        <div class="card-links"><span data-i18n="proj.review">repositório em revisão · link em breve</span></div>
       </article>
 
       <article class="card">
@@ -521,7 +523,7 @@ var EN = {
   'proj.h':'Projects',
   'proj.p':'One thesis, three automations: covering the production process from quote to delivery. Built from real pain points I lived in the printing industry, with mechanics that apply to any production line. Fictional data, documented technical decisions and code written to be explained.',
   'proj.p1t':'Industrial Production Dashboard',
-  'proj.p1d':'Full production data pipeline: reads real (and messy) spreadsheets, cleans inconsistencies, stores them in a database and feeds a dashboard with shop-floor KPIs — output per machine, waste rate, setup time and on-time delivery. Use case: printing industry.',
+  'proj.p1d':'Reads production spreadsheets with real-world mess — misplaced headers, dates in four formats, mismatched machine names, duplicates —, validates, stores in a database and generates a dashboard, an Excel report and an auditable CSV. Last run: 736 rows read, 678 stored, 5.71% rejected with a reason.',
   'proj.p2t':'Production Quoting Engine',
   'proj.p2d':'Calculates cost and price of a production order from its technical specification — material, quantity, processes and finishing — using an external rules table. Business rules live outside the code: changing a price does not require changing the program.',
   'proj.p3t':'Automated File Validator',
@@ -530,6 +532,7 @@ var EN = {
   'proj.p5d':'Web guessing game with speech recognition, built during programming-logic training. First hands-on contact with DOM manipulation and events.',
   'proj.p6d':'Web app that draws random numbers without repetition within a user-defined range, with input validation.',
   'proj.rules':'External rules','proj.soon':'repository coming soon',
+  'proj.review':'repository under review · link coming soon',
   'tag.dev':'in progress','tag.plan':'planned','tag.done':'completed',
   'ct.h':"Let's talk",
   'ct.p':'Open to junior roles in Systems Analysis, Automation/RPA, Processes or Data, and to Technology Internship Programmes — in any industry where manual work still costs time and creates errors.',
@@ -587,7 +590,7 @@ var ES = {
   'proj.h':'Proyectos',
   'proj.p':'Una tesis, tres automatizaciones: cubrir el proceso productivo del presupuesto a la entrega. Construidas a partir de dolores reales que viví en la industria gráfica, con mecánica aplicable a cualquier producción. Datos ficticios, decisiones técnicas documentadas y código escrito para ser explicado.',
   'proj.p1t':'Panel de Producción Industrial',
-  'proj.p1d':'Pipeline completo de datos de producción: lee planillas reales (y sucias), trata inconsistencias, guarda en base de datos y alimenta un panel con indicadores de planta — productividad por máquina, merma, tiempo de preparación y cumplimiento de plazos. Caso de uso: industria gráfica.',
+  'proj.p1d':'Lee planillas de producción con la suciedad que aparece de verdad — encabezado fuera de lugar, fechas en cuatro formatos, nombres de máquina divergentes, duplicados —, valida, guarda en base de datos y genera panel, informe Excel y CSV auditable. Última ejecución: 736 filas leídas, 678 guardadas, 5,71% rechazadas con motivo.',
   'proj.p2t':'Motor de Presupuesto de Producción',
   'proj.p2d':'Calcula costo y precio de una orden de producción a partir de la especificación técnica — material, cantidad, procesos y acabado — usando una tabla de reglas externa. La regla de negocio vive fuera del código: cambiar un precio no exige cambiar el programa.',
   'proj.p3t':'Validador Automático de Archivos',
@@ -596,6 +599,7 @@ var ES = {
   'proj.p5d':'Juego web de adivinanza con reconocimiento de voz, hecho durante la formación en lógica de programación. Primer contacto práctico con manipulación del DOM y eventos.',
   'proj.p6d':'Aplicación web que sortea números sin repetición dentro de un rango definido por el usuario, con validación de entrada.',
   'proj.rules':'Reglas externas','proj.soon':'repositorio próximamente',
+  'proj.review':'repositorio en revisión · enlace próximamente',
   'tag.dev':'en desarrollo','tag.plan':'planificado','tag.done':'concluido',
   'ct.h':'Hablemos',
   'ct.p':'Abierto a posiciones júnior en Análisis de Sistemas, Automatización/RPA, Procesos o Datos, y a Programas de Prácticas en Tecnología — en cualquier industria donde el proceso manual aún cueste tiempo y genere errores.',
