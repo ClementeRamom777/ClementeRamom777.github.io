@@ -1,8 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <rect width="64" height="64" rx="14" fill="#0b1215"/>
-  <rect x="1.5" y="1.5" width="61" height="61" rx="12.5" fill="none" stroke="#1e3a33" stroke-width="2"/>
-  <text x="16" y="45"
-        font-family="JetBrains Mono, Consolas, ui-monospace, monospace"
-        font-size="38" font-weight="700" fill="#e7efea">R</text>
-  <rect x="41" y="18" width="9" height="27" fill="#29e07f"/>
+  <rect width="64" height="64" rx="13" fill="#0b1215"/>
+  <rect x="1" y="1" width="62" height="62" rx="12" fill="none" stroke="#1e3a33" stroke-width="2"/>
+  <path d="M33 20H28.5A6.5 6.5 0 0 0 22 26.5V44"
+        fill="none" stroke="#e7efea" stroke-width="7" stroke-linecap="butt" stroke-linejoin="round"/>
+  <rect x="38" y="40.5" width="7" height="7" fill="#29e07f"/>
 </svg>

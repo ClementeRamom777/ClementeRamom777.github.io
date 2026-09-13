@@ -3,31 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ramom Clemente — Analista de Sistemas | Automação Industrial e de Processos</title>
-<meta name="description" content="Analista de Sistemas e desenvolvedor Python focado em automação industrial e de processos. Quase cinco anos de indústria gráfica, do chão de fábrica à análise de sistemas.">
+<title>Ramom Clemente — Desenvolvedor | Analista de Sistemas | Automação Industrial e de Processos</title>
+<meta name="description" content="Desenvolvedor Python e Analista de Sistemas focado em automação industrial e de processos. Quase cinco anos de indústria gráfica, do chão de fábrica à análise de sistemas.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#070b0d;--bg-2:#0b1215;--surface:#0e1719;
     --line:#17282a;--line-2:#1e3a33;
     --green:#29e07f;--green-dim:#1f8f4e;
     --txt:#e7efea;--txt-2:#9fb3a8;--txt-3:#6f857b;
-    --mono:'JetBrains Mono',ui-monospace,Consolas,monospace;
+    --mono:'IBM Plex Mono',ui-monospace,Consolas,monospace;
     --sans:'Inter',system-ui,-apple-system,Segoe UI,sans-serif;
+    --display:'Archivo',var(--sans);
     --max:1080px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{background:var(--bg);color:var(--txt);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   a{color:inherit;text-decoration:none}
+  h1,h2,h3{font-family:var(--display)}
   .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+  .skip{position:absolute;left:-9999px;top:0;z-index:100;font-family:var(--mono);font-size:13px;padding:10px 16px;background:var(--green);color:#04120a;border-radius:0 0 8px 0;font-weight:600}
+  .skip:focus{left:0}
 
   header{position:sticky;top:0;z-index:50;background:rgba(7,11,13,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:62px;gap:12px}
-  .brand{font-family:var(--mono);font-weight:700;letter-spacing:.06em;font-size:14px;flex-shrink:0}
+  .brand{font-family:var(--mono);font-weight:500;letter-spacing:.1em;font-size:14px;flex-shrink:0;color:var(--txt)}
   .brand span{color:var(--green)}
   .nav-links{display:flex;gap:24px;align-items:center}
   .nav-links a{font-size:14px;color:var(--txt-2);transition:color .2s;white-space:nowrap}
@@ -35,10 +40,10 @@
   .langs{display:flex;border:1px solid var(--line-2);border-radius:7px;overflow:hidden;flex-shrink:0}
   .lang{font-family:var(--mono);font-size:11.5px;background:transparent;color:var(--txt-3);padding:6px 10px;border:0;cursor:pointer;transition:.2s;letter-spacing:.06em}
   .lang:hover{color:var(--green)}
-  .lang.active{background:var(--green);color:#04120a;font-weight:700}
+  .lang.active{background:var(--green);color:#04120a;font-weight:600}
   .menu-btn{display:none;background:none;border:0;color:var(--txt);font-size:22px;cursor:pointer}
 
-  .hero{position:relative;padding:104px 0 92px;overflow:hidden}
+  .hero{position:relative;padding:104px 0 92px;overflow:hidden;border-top:0}
   .hero canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.55}
   .hero .wrap{position:relative;z-index:2}
   .hero-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:48px;align-items:center}
@@ -52,7 +57,7 @@
   .btn:hover{border-color:var(--green);color:var(--green);transform:translateY(-1px)}
   .ico{width:15px;height:15px;flex-shrink:0;fill:currentColor}
   .ico-l{width:15px;height:15px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-  .btn.primary{background:var(--green);color:#04120a;border-color:var(--green);font-weight:700}
+  .btn.primary{background:var(--green);color:#04120a;border-color:var(--green);font-weight:600}
   .btn.primary:hover{background:#3ff294;color:#04120a;box-shadow:0 0 20px rgba(41,224,127,.4)}
   .focus{background:rgba(14,23,25,.72);border:1px solid var(--line-2);border-radius:14px;padding:26px;backdrop-filter:blur(6px)}
   .focus h3{font-family:var(--mono);font-size:12px;color:var(--green);letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px}
@@ -83,7 +88,7 @@
   .tl-item::before{content:'';position:absolute;left:-25px;top:8px;width:11px;height:11px;border-radius:50%;background:var(--bg);border:2px solid var(--green-dim)}
   .tl-item.now::before{background:var(--green);border-color:var(--green);box-shadow:0 0 0 4px rgba(41,224,127,.15)}
   .tl-date{font-family:var(--mono);font-size:12px;color:var(--green);letter-spacing:.05em}
-  .tl-role{font-size:17px;font-weight:600;margin-top:4px}
+  .tl-role{font-family:var(--display);font-size:17px;font-weight:600;line-height:1.7;margin-top:4px}
   .tl-org{font-size:14px;color:var(--txt-3);margin-bottom:9px}
   .tl-item ul{list-style:none;display:flex;flex-direction:column;gap:7px}
   .tl-item li{color:var(--txt-2);font-size:14.5px;padding-left:16px;position:relative}
@@ -98,7 +103,7 @@
   .stack-card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px}
   .stack-card h3{font-family:var(--mono);font-size:12px;color:var(--green);letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
   .stack-card.learn h3{color:var(--txt-3)}
-  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none}
   .chip{font-family:var(--mono);font-size:12px;padding:5px 11px;border-radius:20px;background:rgba(41,224,127,.07);border:1px solid var(--line-2);color:var(--txt-2)}
   .stack-card.learn .chip{background:rgba(160,180,175,.05);color:var(--txt-3)}
 
@@ -142,6 +147,7 @@
 </style>
 </head>
 <body>
+<a href="#conteudo" class="skip" data-i18n="skip.link">Pular para o conteúdo</a>
 <svg style="display:none" aria-hidden="true">
   <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zm1.78 13.02H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></symbol>
   <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 .3a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.65 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58A12 12 0 0 0 12 .3z"/></symbol>
@@ -150,7 +156,7 @@
 </svg>
 <header>
   <div class="wrap nav">
-    <a href="#" class="brand">ramom<span>.dev</span></a>
+    <a href="#conteudo" class="brand">ramom<span>.</span>dev</a>
     <nav class="nav-links" id="navLinks">
       <a href="#sobre" data-i18n="nav.about">Sobre</a>
       <a href="#trajetoria" data-i18n="nav.exp">Trajetória</a>
@@ -159,23 +165,25 @@
       <a href="#contato" data-i18n="nav.contact">Contato</a>
     </nav>
     <div style="display:flex;gap:10px;align-items:center">
-      <div class="langs">
-        <button class="lang active" data-lang="pt">PT</button>
-        <button class="lang" data-lang="en">EN</button>
-        <button class="lang" data-lang="es">ES</button>
+      <div class="langs" role="group" aria-label="Idioma">
+        <button class="lang active" data-lang="pt" aria-pressed="true">PT</button>
+        <button class="lang" data-lang="en" aria-pressed="false">EN</button>
+        <button class="lang" data-lang="es" aria-pressed="false">ES</button>
       </div>
-      <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">☰</button>
     </div>
   </div>
 </header>
 
-<section class="hero" style="border-top:0">
+<main id="conteudo">
+
+<section class="hero" aria-labelledby="hero-title">
   <canvas id="grid" aria-hidden="true"></canvas>
   <div class="wrap hero-grid">
     <div>
-      <p class="kicker" data-i18n="hero.kicker">Analista de Sistemas · Desenvolvedor Python</p>
-      <h1 data-i18n="hero.title">Automação industrial<br><em>e de processos</em></h1>
-      <p class="lead" data-i18n="hero.lead">Transformo rotina manual em processo automatizado e auditável: produção, custos, validação de arquivos e análise de dados. Quase cinco anos de indústria gráfica — do chão de fábrica à análise de sistemas — me ensinaram onde o processo trava. Hoje automatizo com Python, apoiado em Excel, SQL e matplotlib.</p>
+      <p class="kicker" data-i18n="hero.kicker">Desenvolvedor · Analista de Sistemas</p>
+      <h1 id="hero-title" data-i18n="hero.title">Automatizo o processo<br><em>que eu já operei</em></h1>
+      <p class="lead" data-i18n="hero.lead">Transformo rotina manual em processo automatizado e auditável: produção, custos e validação de arquivos. Quase cinco anos de indústria gráfica — do chão de fábrica à análise de sistemas — me ensinaram onde o processo trava. Escrevo em Python, e só publico código que consigo explicar.</p>
       <p class="motto">SAPERE AUDE — <span data-i18n="hero.motto">ouse saber</span></p>
       <div class="cta">
         <a class="btn primary" href="https://www.linkedin.com/in/ramom-clemente" target="_blank" rel="noopener"><svg class="ico"><use href="#i-linkedin"/></svg>LinkedIn</a>
@@ -186,21 +194,21 @@
     </div>
     <aside class="focus">
       <h3 data-i18n="focus.h">Foco atual</h3>
-      <p data-i18n="focus.p">Aprofundando os dois pilares que sustentam automação moderna: dados e IA aplicada.</p>
+      <p data-i18n="focus.p">Construindo base sólida de desenvolvimento, com IA integrada ao fluxo de trabalho.</p>
       <ul>
-        <li data-i18n="focus.i1">SQL e modelagem de dados</li>
-        <li data-i18n="focus.i2">IA aplicada e agentes</li>
-        <li data-i18n="focus.i3">Python para processos produtivos</li>
+        <li data-i18n="focus.i1">Desenvolvimento web — JavaScript, React e Java</li>
+        <li data-i18n="focus.i2">IA aplicada ao desenvolvimento</li>
+        <li data-i18n="focus.i3">Python para automação de processos</li>
       </ul>
     </aside>
   </div>
 </section>
 
-<section id="sobre">
+<section id="sobre" aria-labelledby="sobre-h">
   <div class="wrap">
     <div class="sec-head">
-      <p class="sec-num">01</p>
-      <h2 data-i18n="about.h">Sobre</h2>
+      <p class="sec-num" aria-hidden="true">01</p>
+      <h2 id="sobre-h" data-i18n="about.h">Sobre</h2>
     </div>
     <div class="about">
       <div>
@@ -212,7 +220,7 @@
       </div>
       <dl class="facts">
         <div class="fact"><dt data-i18n="facts.loc">Localização</dt><dd>Barueri - São Paulo, Brasil</dd></div>
-        <div class="fact"><dt data-i18n="facts.focus">Foco</dt><dd data-i18n="facts.focusv">Automação · Dados · RPA · Pré-impressão</dd></div>
+        <div class="fact"><dt data-i18n="facts.focus">Foco</dt><dd data-i18n="facts.focusv">Desenvolvimento · Automação · RPA · Pré-impressão</dd></div>
         <div class="fact"><dt data-i18n="facts.exp">Experiência</dt><dd data-i18n="facts.expv">4 anos e 9 meses em indústria gráfica</dd></div>
         <div class="fact"><dt data-i18n="facts.edu">Formação</dt><dd data-i18n="facts.eduv">Tec. em Jogos Digitais · Desenvolvimento de Software (cursando)</dd></div>
         <div class="fact"><dt data-i18n="facts.tech">CAI</dt><dd data-i18n="facts.techv">SENAI — Aprendizagem Industrial Gráfica</dd></div>
@@ -223,156 +231,156 @@
   </div>
 </section>
 
-<section id="trajetoria">
+<section id="trajetoria" aria-labelledby="trajetoria-h">
   <div class="wrap">
     <div class="sec-head">
-      <p class="sec-num">02</p>
-      <h2 data-i18n="exp.h">Trajetória</h2>
+      <p class="sec-num" aria-hidden="true">02</p>
+      <h2 id="trajetoria-h" data-i18n="exp.h">Trajetória</h2>
       <p data-i18n="exp.p">Do chão de fábrica à análise de sistemas, dentro da mesma indústria.</p>
     </div>
     <div class="tl">
 
-      <div class="tl-item now">
-        <p class="tl-date">dez 2024 — jun 2026</p>
-        <p class="tl-role" data-i18n="exp.r1">Analista de Sistemas Jr.</p>
+      <article class="tl-item now">
+        <p class="tl-date"><time datetime="2024-12">dez 2024</time> — <time datetime="2026-06">jun 2026</time></p>
+        <h3 class="tl-role" data-i18n="exp.r1">Analista de Sistemas Jr.</h3>
         <p class="tl-org">Gráfica Forma Certa · São Paulo</p>
         <ul>
           <li data-i18n="exp.r1a">Manutenção e extensão de fluxos automatizados no Enfocus Switch com ajustes em Python, rotinas no ERP E-calc e relatórios operacionais em Excel.</li>
         </ul>
-      </div>
+      </article>
 
-      <div class="tl-item">
-        <p class="tl-date">mar 2024 — dez 2024</p>
-        <p class="tl-role" data-i18n="exp.r2">Assistente de Orçamento</p>
+      <article class="tl-item">
+        <p class="tl-date"><time datetime="2024-03">mar 2024</time> — <time datetime="2024-12">dez 2024</time></p>
+        <h3 class="tl-role" data-i18n="exp.r2">Assistente de Orçamento</h3>
         <p class="tl-org">Gráfica Forma Certa · Barueri</p>
         <ul>
           <li data-i18n="exp.r2a">Orçamentos e ordens de serviço no ERP, traduzindo especificação comercial em estimativa de custo.</li>
         </ul>
-      </div>
+      </article>
 
-      <div class="tl-item">
-        <p class="tl-date">jan 2024 — mar 2024</p>
-        <p class="tl-role" data-i18n="exp.r3">Auxiliar de Acabamento</p>
+      <article class="tl-item">
+        <p class="tl-date"><time datetime="2024-01">jan 2024</time> — <time datetime="2024-03">mar 2024</time></p>
+        <h3 class="tl-role" data-i18n="exp.r3">Auxiliar de Acabamento</h3>
         <p class="tl-org">Gráfica Forma Certa · Barueri</p>
         <ul>
           <li data-i18n="exp.r3a">Etapa final da produção, com contato direto com padrão de qualidade e prazo.</li>
         </ul>
-      </div>
+      </article>
 
-      <div class="tl-item">
-        <p class="tl-date">ago 2023 — out 2023</p>
-        <p class="tl-role" data-i18n="exp.r4">Assistente de Produção</p>
+      <article class="tl-item">
+        <p class="tl-date"><time datetime="2023-08">ago 2023</time> — <time datetime="2023-10">out 2023</time></p>
+        <h3 class="tl-role" data-i18n="exp.r4">Assistente de Produção</h3>
         <p class="tl-org">Antilhas Embalagens &amp; Soluções · São Paulo</p>
         <ul>
           <li data-i18n="exp.r4a">Apoio à produção e controle operacional em Excel, no segmento de embalagens.</li>
         </ul>
-      </div>
+      </article>
 
-      <div class="tl-item">
-        <p class="tl-date">jul 2021 — jun 2023</p>
-        <p class="tl-role" data-i18n="exp.r5">Assistente de Produção (Aprendiz)</p>
+      <article class="tl-item">
+        <p class="tl-date"><time datetime="2021-07">jul 2021</time> — <time datetime="2023-06">jun 2023</time></p>
+        <h3 class="tl-role" data-i18n="exp.r5">Assistente de Produção (Aprendiz)</h3>
         <p class="tl-org">Brasilgráfica S.A. · São Paulo</p>
         <ul>
           <li data-i18n="exp.r5a">Dois anos de formação prática em produção gráfica, em paralelo à Aprendizagem Industrial no SENAI.</li>
         </ul>
-      </div>
+      </article>
 
       <p class="tl-more"><a href="https://www.linkedin.com/in/ramom-clemente" target="_blank" rel="noopener" data-i18n="exp.more">Detalhes de cada cargo no LinkedIn →</a></p>
 
       <div class="tl-sub">
         <p class="tl-learn" data-i18n="exp.learn">Aprendizado contínuo</p>
 
-        <div class="tl-item">
+        <article class="tl-item">
           <p class="tl-date" data-i18n="exp.d6">em curso</p>
-          <p class="tl-role" data-i18n="exp.r6">Tecnologia em Jogos Digitais</p>
+          <h3 class="tl-role" data-i18n="exp.r6">Tecnologia em Jogos Digitais</h3>
           <p class="tl-org">UNINTER</p>
           <ul>
             <li data-i18n="exp.r6a">Lógica de programação e algoritmos, orientação a objetos, banco de dados relacional, desenvolvimento web, métodos ágeis e otimização de desempenho.</li>
           </ul>
-        </div>
-        <div class="tl-item">
+        </article>
+        <article class="tl-item">
           <p class="tl-date" data-i18n="exp.d10">em curso</p>
-          <p class="tl-role" data-i18n="exp.r10">Inglês — Programa NEW UBEST</p>
+          <h3 class="tl-role" data-i18n="exp.r10">Inglês — Programa NEW UBEST</h3>
           <p class="tl-org">UNINTER</p>
           <ul>
             <li data-i18n="exp.r10a">Formação em inglês estruturada em três níveis: Basic, Intermediate e Advanced.</li>
           </ul>
-        </div>
+        </article>
 
-        <div class="tl-item">
+        <article class="tl-item">
           <p class="tl-date" data-i18n="exp.d9">em curso</p>
-          <p class="tl-role" data-i18n="exp.r9">Formação em SQL e Banco de Dados</p>
-          <p class="tl-org">Hashtag Treinamentos</p>
+          <h3 class="tl-role" data-i18n="exp.r9">Formação Dev Full Stack com IA</h3>
+          <p class="tl-org">Alura</p>
           <ul>
-           <li data-i18n="exp.r9a">Consultas, modelagem relacional, junções, agregações e otimização — base para análise de dados e automação.</li>
+           <li data-i18n="exp.r9a">Fundamentos da web, HTML, CSS, JavaScript, React, Java, Spring Boot, APIs e banco de dados, com IA aplicada ao fluxo de desenvolvimento.</li>
           </ul>
-        </div>
+        </article>
 
-        <div class="tl-item">
+        <article class="tl-item">
           <p class="tl-date" data-i18n="exp.d8">em curso</p>
-          <p class="tl-role" data-i18n="exp.r8">IA aplicada e agentes com Claude</p>
+          <h3 class="tl-role" data-i18n="exp.r8">IA aplicada e agentes com Claude</h3>
           <p class="tl-org">Hashtag Treinamentos</p>
           <ul>
             <li data-i18n="exp.r8a">Uso de modelos de linguagem e agentes de IA aplicados a fluxos de trabalho e automação.</li>
           </ul>
-        </div>
+        </article>
 
-        <div class="tl-item">
+        <article class="tl-item">
           <p class="tl-date" data-i18n="exp.d7">concluído</p>
-          <p class="tl-role" data-i18n="exp.r7">Aprendizagem Industrial Gráfica (CAI)</p>
+          <h3 class="tl-role" data-i18n="exp.r7">Aprendizagem Industrial Gráfica (CAI)</h3>
           <p class="tl-org">SENAI "José Ephim Mindlin" · Barueri</p>
           <ul>
             <li data-i18n="exp.r7a">Pré-impressão, impressão, acabamento, controle de qualidade e planejamento de produção.</li>
           </ul>
-        </div>
+        </article>
       </div>
 
     </div>
   </div>
 </section>
 
-<section id="stack">
+<section id="stack" aria-labelledby="stack-h">
   <div class="wrap">
     <div class="sec-head">
-      <p class="sec-num">03</p>
-      <h2 data-i18n="stack.h">Stack</h2>
-      <p data-i18n="stack.p">Ferramentas que uso para transformar processo manual em processo automatizado e auditável.</p>
+      <p class="sec-num" aria-hidden="true">03</p>
+      <h2 id="stack-h" data-i18n="stack.h">Stack</h2>
+      <p data-i18n="stack.p">Ferramentas que uso para construir software e transformar processo manual em processo automatizado e auditável.</p>
     </div>
     <div class="stack-grid">
       <div class="stack-card">
         <h3 data-i18n="stack.c1">Linguagens</h3>
-        <div class="chips"><span class="chip">Python</span><span class="chip">C#</span><span class="chip">SQL</span><span class="chip">JavaScript</span><span class="chip">HTML · CSS</span></div>
+        <ul class="chips"><li class="chip">Python</li><li class="chip">C#</li><li class="chip">SQL</li><li class="chip">JavaScript</li><li class="chip">HTML · CSS</li></ul>
       </div>
       <div class="stack-card">
-        <h3 data-i18n="stack.c2">Dados e análise</h3>
-        <div class="chips"><span class="chip">Excel avançado</span><span class="chip">Power BI</span><span class="chip">SQLite</span><span class="chip">openpyxl</span><span class="chip">pandas</span></div>
+        <h3 data-i18n="stack.c2">Banco e planilhas</h3>
+        <ul class="chips"><li class="chip">Excel avançado</li><li class="chip">SQLite</li><li class="chip">openpyxl</li><li class="chip">pandas</li></ul>
       </div>
       <div class="stack-card">
         <h3 data-i18n="stack.c3">Automação</h3>
-        <div class="chips"><span class="chip">RPA</span><span class="chip">Enfocus Switch</span><span class="chip" data-i18n="stack.sched">Agendamento</span><span class="chip" data-i18n="stack.files">Tratamento de arquivos</span></div>
+        <ul class="chips"><li class="chip">RPA</li><li class="chip">Enfocus Switch</li><li class="chip" data-i18n="stack.sched">Agendamento</li><li class="chip" data-i18n="stack.files">Tratamento de arquivos</li></ul>
       </div>
       <div class="stack-card">
         <h3 data-i18n="stack.c4">Domínio industrial</h3>
-        <div class="chips"><span class="chip" data-i18n="stack.pre">Pré-impressão</span><span class="chip">Print on Demand</span><span class="chip">ERP E-calc</span><span class="chip" data-i18n="stack.pcp">Planejamento de produção</span></div>
+        <ul class="chips"><li class="chip" data-i18n="stack.pre">Pré-impressão</li><li class="chip">Print on Demand</li><li class="chip">ERP E-calc</li><li class="chip" data-i18n="stack.pcp">Planejamento de produção</li></ul>
       </div>
       <div class="stack-card">
         <h3 data-i18n="stack.c5">Engenharia e segurança</h3>
-        <div class="chips"><span class="chip">Git · GitHub</span><span class="chip" data-i18n="stack.secret">Gestão de segredos</span><span class="chip" data-i18n="stack.logs">Logs auditáveis</span><span class="chip" data-i18n="stack.valid">Validação de entrada</span><span class="chip" data-i18n="stack.doc">Documentação</span></div>
+        <ul class="chips"><li class="chip">Git · GitHub</li><li class="chip" data-i18n="stack.secret">Gestão de segredos</li><li class="chip" data-i18n="stack.logs">Logs auditáveis</li><li class="chip" data-i18n="stack.valid">Validação de entrada</li><li class="chip" data-i18n="stack.doc">Documentação</li></ul>
       </div>
       <div class="stack-card">
         <h3 data-i18n="stack.c7">IA aplicada</h3>
-        <div class="chips"><span class="chip">Claude · Claude Code</span><span class="chip" data-i18n="stack.aiflow">Chat GPT · Codex</span><span class="chip" data-i18n="stack.prompt">Engenharia de prompt</span><span class="chip" data-i18n="stack.agents">Agentes de IA</span><span class="chip" data-i18n="stack.aiflow">IA em fluxo de trabalho</span></div>
+        <ul class="chips"><li class="chip">Claude · Claude Code</li><li class="chip">Chat GPT · Codex</li><li class="chip" data-i18n="stack.prompt">Engenharia de prompt</li><li class="chip" data-i18n="stack.agents">Agentes de IA</li><li class="chip" data-i18n="stack.aiflow">IA em fluxo de trabalho</li></ul>
       </div>
     </div>
   </div>
 </section>
 
-<section id="projetos">
+<section id="projetos" aria-labelledby="projetos-h">
   <div class="wrap">
     <div class="sec-head">
-      <p class="sec-num">04</p>
-      <h2 data-i18n="proj.h">Projetos</h2>
-      <p data-i18n="proj.p">Uma tese, três automações: cobrir o processo produtivo do orçamento à entrega. Construídas a partir de dores reais que vivi na indústria gráfica, com mecânica aplicável a qualquer produção. Dados fictícios, decisões técnicas documentadas e código escrito para ser explicado.</p>
+      <p class="sec-num" aria-hidden="true">04</p>
+      <h2 id="projetos-h" data-i18n="proj.h">Projetos</h2>
+      <p data-i18n="proj.p">Seis projetos. Os três primeiros formam uma tese: cobrir o processo produtivo do orçamento à entrega, a partir de dores reais que vivi na indústria gráfica, com mecânica aplicável a qualquer produção — dados fictícios, decisões técnicas documentadas e código escrito para ser explicado. Os outros três são menores e assumidos como tal: uma ferramenta de linha de comando e dois exercícios de lógica e JavaScript, feitos durante o estudo.</p>
     </div>
     <div class="proj-grid">
 
@@ -383,8 +391,7 @@
         </div>
         <img class="card-img" src="img_painel_producao.png" alt="Painel de Produção Industrial" loading="lazy">
         <p data-i18n="proj.p1d">Lê planilhas de produção com a sujeira que aparece de verdade — cabeçalho fora de lugar, datas em quatro formatos, nomes de máquina divergentes, duplicatas —, valida, grava em banco e gera painel, relatório Excel e CSV auditável. Última execução: 736 linhas lidas, 678 gravadas, 5,71% rejeitadas com motivo.</p>
-        <div class="chips"><span class="chip">Python</span><span class="chip">pandas</span><span class="chip">SQLite</span><span class="chip">matplotlib
-</span><span class="chip">pytest</span></div>
+        <ul class="chips"><li class="chip">Python</li><li class="chip">pandas</li><li class="chip">SQLite</li><li class="chip">matplotlib</li><li class="chip">pytest</li></ul>
         <div class="card-links"><span data-i18n="proj.review">repositório em revisão · link em breve</span></div>
       </article>
 
@@ -394,7 +401,7 @@
           <span class="tag plan" data-i18n="tag.plan">planejado</span>
         </div>
         <p data-i18n="proj.p2d">Calcula custo e preço de uma ordem de produção a partir da especificação técnica — material, quantidade, processos e acabamento — usando tabela de regras externa. Regra de negócio fora do código: alterar preço não exige alterar programa.</p>
-        <div class="chips"><span class="chip">Python</span><span class="chip">openpyxl</span><span class="chip" data-i18n="proj.rules">Regras externas</span></div>
+        <ul class="chips"><li class="chip">Python</li><li class="chip">openpyxl</li><li class="chip" data-i18n="proj.rules">Regras externas</li></ul>
         <div class="card-links"><span data-i18n="proj.soon">repositório em breve</span></div>
       </article>
 
@@ -404,7 +411,7 @@
           <span class="tag plan" data-i18n="tag.plan">planejado</span>
         </div>
         <p data-i18n="proj.p3d">Robô que vigia uma pasta de entrada, valida cada arquivo contra as regras de produção e separa aprovados de reprovados, registrando o motivo de cada reprovação. Caso de uso: pré-flight gráfico (páginas, dimensões, sangria, resolução, cor e fontes).</p>
-        <div class="chips"><span class="chip">Python</span><span class="chip">PyMuPDF</span><span class="chip">RPA</span><span class="chip">Logging</span></div>
+        <ul class="chips"><li class="chip">Python</li><li class="chip">PyMuPDF</li><li class="chip">RPA</li><li class="chip">Logging</li></ul>
         <div class="card-links"><span data-i18n="proj.soon">repositório em breve</span></div>
       </article>
 
@@ -414,7 +421,7 @@
           <span class="tag done" data-i18n="tag.done">concluído</span>
         </div>
         <p data-i18n="proj.p4d">Ferramenta de linha de comando que consulta dados do Brasileirão via API: próximos jogos, resultados e classificação. Projeto pessoal com foco em consumo de API, cache local resiliente e proteção de credenciais.</p>
-        <div class="chips"><span class="chip">Python</span><span class="chip">requests</span><span class="chip">API REST</span><span class="chip">Cache</span></div>
+        <ul class="chips"><li class="chip">Python</li><li class="chip">requests</li><li class="chip">API REST</li><li class="chip">Cache</li></ul>
         <div class="card-links"><a href="https://github.com/ClementeRamom777/verdao-ops" target="_blank" rel="noopener">GitHub →</a></div>
       </article>
 
@@ -424,7 +431,7 @@
           <span class="tag done" data-i18n="tag.done">concluído</span>
         </div>
         <p data-i18n="proj.p5d">Jogo web de adivinhação com reconhecimento de voz, feito durante a formação em lógica de programação. Primeiro contato prático com manipulação de DOM e eventos.</p>
-        <div class="chips"><span class="chip">JavaScript</span><span class="chip">HTML</span><span class="chip">CSS</span></div>
+        <ul class="chips"><li class="chip">JavaScript</li><li class="chip">HTML</li><li class="chip">CSS</li></ul>
         <div class="card-links"><a href="https://github.com/ClementeRamom777/numero-secreto" target="_blank" rel="noopener">GitHub →</a></div>
       </article>
 
@@ -434,7 +441,7 @@
           <span class="tag done" data-i18n="tag.done">concluído</span>
         </div>
         <p data-i18n="proj.p6d">Aplicação web que sorteia números sem repetição dentro de um intervalo definido pelo usuário, com validação de entrada.</p>
-        <div class="chips"><span class="chip">JavaScript</span><span class="chip">HTML</span><span class="chip">CSS</span></div>
+        <ul class="chips"><li class="chip">JavaScript</li><li class="chip">HTML</li><li class="chip">CSS</li></ul>
         <div class="card-links"><a href="https://github.com/ClementeRamom777/sorteador-numeros" target="_blank" rel="noopener">GitHub →</a></div>
       </article>
 
@@ -442,11 +449,11 @@
   </div>
 </section>
 
-<section id="contato">
+<section id="contato" aria-labelledby="contato-h">
   <div class="wrap contact">
-    <p class="sec-num">05</p>
-    <h2 data-i18n="ct.h">Vamos conversar</h2>
-    <p data-i18n="ct.p">Aberto a posições júnior em Análise de Sistemas, Automação/RPA, Processos ou Dados, e a Programas de Estágio em Tecnologia — em qualquer indústria onde processo manual ainda custe tempo e gere erro.</p>
+    <p class="sec-num" aria-hidden="true">05</p>
+    <h2 id="contato-h" data-i18n="ct.h">Onde me encontrar</h2>
+    <p data-i18n="ct.p">Aberto a posições júnior em Desenvolvimento, Análise de Sistemas, Automação/RPA ou Processos, e a Programas de Estágio em Tecnologia — em qualquer indústria onde processo manual ainda custe tempo e gere erro.</p>
     <div class="cta" style="justify-content:center">
       <a class="btn primary" href="mailto:ramomsiqueira2000@hotmail.com"><svg class="ico-l"><use href="#i-mail"/></svg>ramomsiqueira2000@hotmail.com</a>
       <a class="btn" href="https://www.linkedin.com/in/ramom-clemente" target="_blank" rel="noopener"><svg class="ico"><use href="#i-linkedin"/></svg>LinkedIn</a>
@@ -454,6 +461,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <footer>
   <div class="wrap foot">
@@ -465,31 +474,39 @@
 <script>
 document.getElementById('yr').textContent = new Date().getFullYear();
 
-document.getElementById('menuBtn').addEventListener('click', function(){
-  document.getElementById('navLinks').classList.toggle('open');
+var menuBtn = document.getElementById('menuBtn');
+var navLinks = document.getElementById('navLinks');
+
+function setMenu(open){
+  navLinks.classList.toggle('open', open);
+  menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+}
+menuBtn.addEventListener('click', function(){
+  setMenu(!navLinks.classList.contains('open'));
 });
 document.querySelectorAll('#navLinks a').forEach(function(a){
-  a.addEventListener('click', function(){ document.getElementById('navLinks').classList.remove('open'); });
+  a.addEventListener('click', function(){ setMenu(false); });
 });
 
 var EN = {
+  'skip.link':'Skip to content',
   'nav.about':'About','nav.exp':'Career','nav.stack':'Stack','nav.projects':'Projects','nav.contact':'Contact',
-  'hero.kicker':'Systems Analyst · Python Developer',
-  'hero.title':'Industrial and<br><em>process automation</em>',
-  'hero.lead':'I turn manual routine into automated, auditable process: production, costing, file validation and data analysis. Nearly five years in the printing industry — from the shop floor to systems analysis — taught me where processes break. Today I automate with Python, backed by Excel, SQL and matplotlib.',
+  'hero.kicker':'Developer · Systems Analyst',
+  'hero.title':'I automate the process<br><em>I once operated</em>',
+  'hero.lead':'I turn manual routine into automated, auditable process: production, costing and file validation. Nearly five years in the printing industry — from the shop floor to systems analysis — taught me where processes break. I write in Python, and I only publish code I can explain.',
   'hero.motto':'dare to know','hero.cv':'Resume (PDF)','hero.contact':'Contact',
   'focus.h':'Current focus',
-  'focus.p':'Deepening the two pillars behind modern automation: data and applied AI.',
-  'focus.i1':'SQL and data modeling','focus.i2':'Applied AI and agents','focus.i3':'Python for production processes',
+  'focus.p':'Building a solid development foundation, with AI integrated into the workflow.',
+  'focus.i1':'Web development — JavaScript, React and Java','focus.i2':'Applied AI for development','focus.i3':'Python for process automation',
   'about.h':'About',
   'about.p1':'I entered the printing industry as a <strong>production apprentice</strong> and climbed step by step: finishing, production, cost estimating and finally <strong>Systems Analyst</strong>. Nearly five years walking the entire chain before I started programming it.',
   'about.p2':'That path changes the software I write. Work orders, setup time, waste, deadlines, cost per batch — I know where processes break because I operated every stage myself. Good automation is not born from written requirements: it is born from living the pain. And those pains repeat across every industry.',
   'about.p3':'I study <strong>Digital Games Technology</strong>, an IT degree whose curriculum covers programming logic and algorithms, object-oriented programming, relational databases, agile methods and performance optimisation — fundamentals I apply directly to automation. I chose to study what drives me, and I treat that as an advantage: people who enjoy the work go deeper into it.',
   'about.p4':'I write code with <strong>reliable data, auditable processes and protected credentials</strong> in mind: secrets outside the repository, logging for every decision, explicit input validation. And I only publish what I can explain line by line.',
   'about.p5':'I use <strong>AI as an engineering tool</strong>, with a stated method: initial code is generated with AI support, then rewritten by hand and reviewed block by block until I can explain every part without looking anything up. Architecture decisions are mine. It is written that way in every project README — transparency is part of the delivery.',
-  'facts.loc':'Location','facts.focus':'Focus','facts.focusv':'Automation · Data · RPA',
+  'facts.loc':'Location','facts.focus':'Focus','facts.focusv':'Development · Automation · RPA · Prepress',
   'facts.exp':'Experience','facts.expv':'4 years and 9 months in the printing industry',
-  'facts.edu':'Education','facts.eduv':'Digital Games Tech. (in progress)',
+  'facts.edu':'Education','facts.eduv':'Digital Games Tech. · Software Development (in progress)',
   'facts.tech':'CAI','facts.techv':'SENAI — Graphic Industry Apprenticeship',
   'facts.lang':'Languages','facts.langv':'Portuguese (native) · English and Spanish (basic)',
   'facts.status':'Status','facts.statusv':'Open to opportunities',
@@ -509,19 +526,19 @@ var EN = {
   'exp.r6a':'Programming logic and algorithms, object-oriented programming, relational databases, web development, agile methods and performance optimisation.',
   'exp.d10':'in progress','exp.r10':'English — NEW UBEST Program',
   'exp.r10a':'Structured English program across three levels: Basic, Intermediate and Advanced.',
-  'exp.d9':'in progress','exp.r9':'SQL and Databases Training',
-  'exp.r9a':'Queries, relational modeling, joins, aggregations and optimization — the foundation for data analysis and automation.',
+  'exp.d9':'in progress','exp.r9':'Full Stack Dev with AI Training',
+  'exp.r9a':'Web fundamentals, HTML, CSS, JavaScript, React, Java, Spring Boot, APIs and databases, with AI applied to the development workflow.',
   'exp.d8':'in progress','exp.r8':'Applied AI and agents with Claude',
   'exp.r8a':'Using language models and AI agents applied to workflows and automation.',
   'exp.d7':'completed','exp.r7':'Graphic Industry Apprenticeship (CAI)',
   'exp.r7a':'Prepress, printing, finishing, quality control and production planning.',
-  'stack.h':'Stack','stack.p':'Tools I use to turn manual processes into automated, auditable ones.',
-  'stack.c1':'Languages','stack.c2':'Data and analysis','stack.c3':'Automation','stack.c4':'Industrial domain','stack.c5':'Engineering and security','stack.c6':'Currently learning','stack.c7':'Applied AI',
+  'stack.h':'Stack','stack.p':'Tools I use to build software and turn manual processes into automated, auditable ones.',
+  'stack.c1':'Languages','stack.c2':'Database and spreadsheets','stack.c3':'Automation','stack.c4':'Industrial domain','stack.c5':'Engineering and security','stack.c7':'Applied AI',
   'stack.pre':'Prepress','stack.pcp':'Production planning','stack.sched':'Scheduling','stack.files':'File processing',
   'stack.secret':'Secret management','stack.logs':'Auditable logs','stack.valid':'Input validation','stack.doc':'Documentation',
   'stack.prompt':'Prompt engineering','stack.agents':'AI agents','stack.aiflow':'AI in workflows',
   'proj.h':'Projects',
-  'proj.p':'One thesis, three automations: covering the production process from quote to delivery. Built from real pain points I lived in the printing industry, with mechanics that apply to any production line. Fictional data, documented technical decisions and code written to be explained.',
+  'proj.p':'Six projects. The first three form a thesis: covering the production process from quote to delivery, built from real pain points I lived in the printing industry, with mechanics that apply to any production line — fictional data, documented technical decisions and code written to be explained. The other three are smaller and owned as such: a command-line tool and two logic and JavaScript exercises, built while studying.',
   'proj.p1t':'Industrial Production Dashboard',
   'proj.p1d':'Reads production spreadsheets with real-world mess — misplaced headers, dates in four formats, mismatched machine names, duplicates —, validates, stores in a database and generates a dashboard, an Excel report and an auditable CSV. Last run: 736 rows read, 678 stored, 5.71% rejected with a reason.',
   'proj.p2t':'Production Quoting Engine',
@@ -534,29 +551,30 @@ var EN = {
   'proj.rules':'External rules','proj.soon':'repository coming soon',
   'proj.review':'repository under review · link coming soon',
   'tag.dev':'in progress','tag.plan':'planned','tag.done':'completed',
-  'ct.h':"Let's talk",
-  'ct.p':'Open to junior roles in Systems Analysis, Automation/RPA, Processes or Data, and to Technology Internship Programmes — in any industry where manual work still costs time and creates errors.',
+  'ct.h':'Where to find me',
+  'ct.p':'Open to junior roles in Development, Systems Analysis, Automation/RPA or Processes, and to Technology Internship Programmes — in any industry where manual work still costs time and creates errors.',
   'foot.built':'Built with HTML, CSS and JavaScript · no frameworks'
 };
 
 var ES = {
+  'skip.link':'Saltar al contenido',
   'nav.about':'Sobre mí','nav.exp':'Trayectoria','nav.stack':'Stack','nav.projects':'Proyectos','nav.contact':'Contacto',
-  'hero.kicker':'Analista de Sistemas · Desarrollador Python',
-  'hero.title':'Automatización industrial<br><em>y de procesos</em>',
-  'hero.lead':'Convierto rutina manual en proceso automatizado y auditable: producción, costos, validación de archivos y análisis de datos. Casi cinco años en la industria gráfica — de la planta al análisis de sistemas — me enseñaron dónde se traba el proceso. Hoy automatizo con Python, apoyado en Excel, SQL y matplotlib.',
+  'hero.kicker':'Desarrollador · Analista de Sistemas',
+  'hero.title':'Automatizo el proceso<br><em>que ya operé</em>',
+  'hero.lead':'Convierto rutina manual en proceso automatizado y auditable: producción, costos y validación de archivos. Casi cinco años en la industria gráfica — de la planta al análisis de sistemas — me enseñaron dónde se traba el proceso. Escribo en Python, y solo publico código que puedo explicar.',
   'hero.motto':'atrévete a saber','hero.cv':'Currículum (PDF)','hero.contact':'Contacto',
   'focus.h':'Enfoque actual',
-  'focus.p':'Profundizando los dos pilares que sostienen la automatización moderna: datos e IA aplicada.',
-  'focus.i1':'SQL y modelado de datos','focus.i2':'IA aplicada y agentes','focus.i3':'Python para procesos productivos',
+  'focus.p':'Construyendo una base sólida de desarrollo, con IA integrada al flujo de trabajo.',
+  'focus.i1':'Desarrollo web — JavaScript, React y Java','focus.i2':'IA aplicada al desarrollo','focus.i3':'Python para automatización de procesos',
   'about.h':'Sobre mí',
   'about.p1':'Entré en la industria gráfica como <strong>aprendiz en producción</strong> y subí escalón por escalón: acabado, producción, presupuestos y finalmente <strong>Analista de Sistemas</strong>. Casi cinco años recorriendo toda la cadena antes de empezar a programarla.',
   'about.p2':'Esa trayectoria cambia el tipo de software que escribo. Orden de trabajo, tiempo de preparación, merma, plazos, costo por lote — sé dónde se traba el proceso porque operé cada etapa. La buena automatización no nace de un requisito escrito: nace de quien vivió el dolor. Y esos dolores se repiten en cualquier industria.',
   'about.p3':'Estudio <strong>Tecnología en Juegos Digitales</strong>, una carrera del área de TI cuyo plan cubre lógica de programación y algoritmos, programación orientada a objetos, bases de datos relacionales, métodos ágiles y optimización de rendimiento — fundamentos que aplico directamente en automatización. Elegí estudiar lo que me mueve, y lo trato como ventaja: quien disfruta lo que hace, profundiza más.',
   'about.p4':'Escribo código pensando en <strong>datos confiables, procesos auditables y credenciales protegidas</strong>: secretos fuera del repositorio, registro de cada decisión, validación explícita de entrada. Y solo publico lo que puedo explicar línea por línea.',
   'about.p5':'Uso <strong>IA como herramienta de ingeniería</strong>, con un método declarado: el código inicial se genera con apoyo de IA, luego lo reescribo a mano y lo reviso bloque por bloque hasta poder explicar cada parte sin consultar nada. Las decisiones de arquitectura son mías. Así está escrito en el README de cada proyecto — la transparencia es parte de la entrega.',
-  'facts.loc':'Ubicación','facts.focus':'Enfoque','facts.focusv':'Automatización · Datos · RPA',
+  'facts.loc':'Ubicación','facts.focus':'Enfoque','facts.focusv':'Desarrollo · Automatización · RPA · Preimpresión',
   'facts.exp':'Experiencia','facts.expv':'4 años y 9 meses en industria gráfica',
-  'facts.edu':'Formación','facts.eduv':'Tec. en Juegos Digitales (en curso)',
+  'facts.edu':'Formación','facts.eduv':'Tec. en Juegos Digitales · Desarrollo de Software (en curso)',
   'facts.tech':'CAI','facts.techv':'SENAI — Aprendizaje Industrial Gráfico',
   'facts.lang':'Idiomas','facts.langv':'Portugués (nativo) · Inglés y Español (básico)',
   'facts.status':'Estado','facts.statusv':'Abierto a oportunidades',
@@ -576,19 +594,19 @@ var ES = {
   'exp.r6a':'Lógica de programación y algoritmos, programación orientada a objetos, bases de datos relacionales, desarrollo web, métodos ágiles y optimización de rendimiento.',
   'exp.d10':'en curso','exp.r10':'Inglés — Programa NEW UBEST',
   'exp.r10a':'Formación en inglés estructurada en tres niveles: Basic, Intermediate y Advanced.',
-  'exp.d9':'en curso','exp.r9':'Formación en SQL y Bases de Datos',
-  'exp.r9a':'Consultas, modelado relacional, uniones, agregaciones y optimización — base para análisis de datos y automatización.',
+  'exp.d9':'en curso','exp.r9':'Formación Dev Full Stack con IA',
+  'exp.r9a':'Fundamentos de la web, HTML, CSS, JavaScript, React, Java, Spring Boot, APIs y bases de datos, con IA aplicada al flujo de desarrollo.',
   'exp.d8':'en curso','exp.r8':'IA aplicada y agentes con Claude',
   'exp.r8a':'Uso de modelos de lenguaje y agentes de IA aplicados a flujos de trabajo y automatización.',
   'exp.d7':'concluido','exp.r7':'Aprendizaje Industrial Gráfico (CAI)',
   'exp.r7a':'Preimpresión, impresión, acabado, control de calidad y planificación de producción.',
-  'stack.h':'Stack','stack.p':'Herramientas que uso para convertir procesos manuales en procesos automatizados y auditables.',
-  'stack.c1':'Lenguajes','stack.c2':'Datos y análisis','stack.c3':'Automatización','stack.c4':'Dominio industrial','stack.c5':'Ingeniería y seguridad','stack.c6':'En profundización','stack.c7':'IA aplicada',
+  'stack.h':'Stack','stack.p':'Herramientas que uso para construir software y convertir procesos manuales en procesos automatizados y auditables.',
+  'stack.c1':'Lenguajes','stack.c2':'Base de datos y planillas','stack.c3':'Automatización','stack.c4':'Dominio industrial','stack.c5':'Ingeniería y seguridad','stack.c7':'IA aplicada',
   'stack.pre':'Preimpresión','stack.pcp':'Planificación de producción','stack.sched':'Programación de tareas','stack.files':'Tratamiento de archivos',
   'stack.secret':'Gestión de secretos','stack.logs':'Registros auditables','stack.valid':'Validación de entrada','stack.doc':'Documentación',
   'stack.prompt':'Ingeniería de prompts','stack.agents':'Agentes de IA','stack.aiflow':'IA en flujos de trabajo',
   'proj.h':'Proyectos',
-  'proj.p':'Una tesis, tres automatizaciones: cubrir el proceso productivo del presupuesto a la entrega. Construidas a partir de dolores reales que viví en la industria gráfica, con mecánica aplicable a cualquier producción. Datos ficticios, decisiones técnicas documentadas y código escrito para ser explicado.',
+  'proj.p':'Seis proyectos. Los tres primeros forman una tesis: cubrir el proceso productivo del presupuesto a la entrega, a partir de dolores reales que viví en la industria gráfica, con mecánica aplicable a cualquier producción — datos ficticios, decisiones técnicas documentadas y código escrito para ser explicado. Los otros tres son menores y asumidos como tales: una herramienta de línea de comandos y dos ejercicios de lógica y JavaScript, hechos durante el estudio.',
   'proj.p1t':'Panel de Producción Industrial',
   'proj.p1d':'Lee planillas de producción con la suciedad que aparece de verdad — encabezado fuera de lugar, fechas en cuatro formatos, nombres de máquina divergentes, duplicados —, valida, guarda en base de datos y genera panel, informe Excel y CSV auditable. Última ejecución: 736 filas leídas, 678 guardadas, 5,71% rechazadas con motivo.',
   'proj.p2t':'Motor de Presupuesto de Producción',
@@ -601,8 +619,8 @@ var ES = {
   'proj.rules':'Reglas externas','proj.soon':'repositorio próximamente',
   'proj.review':'repositorio en revisión · enlace próximamente',
   'tag.dev':'en desarrollo','tag.plan':'planificado','tag.done':'concluido',
-  'ct.h':'Hablemos',
-  'ct.p':'Abierto a posiciones júnior en Análisis de Sistemas, Automatización/RPA, Procesos o Datos, y a Programas de Prácticas en Tecnología — en cualquier industria donde el proceso manual aún cueste tiempo y genere errores.',
+  'ct.h':'Dónde encontrarme',
+  'ct.p':'Abierto a posiciones júnior en Desarrollo, Análisis de Sistemas, Automatización/RPA o Procesos, y a Programas de Prácticas en Tecnología — en cualquier industria donde el proceso manual aún cueste tiempo y genere errores.',
   'foot.built':'Construido con HTML, CSS y JavaScript · sin frameworks'
 };
 
@@ -623,8 +641,11 @@ document.querySelectorAll('.lang').forEach(function(btn){
       if (dict[k]) el.innerHTML = dict[k];
     });
     document.documentElement.lang = HTMLLANG[code];
-    document.querySelectorAll('.lang').forEach(function(b){ b.classList.remove('active'); });
-    btn.classList.add('active');
+    document.querySelectorAll('.lang').forEach(function(b){
+      var on = b === btn;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
   });
 });
 
