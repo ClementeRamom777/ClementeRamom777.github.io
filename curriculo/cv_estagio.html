@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Curriculo - Ramom Siqueira Clemente da Silva - Estagio</title>
+<style>
+:root { color-scheme: only light; }
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+@page { size: A4; margin: 14mm; }
+
+html, body {
+  background: #fff;
+  color: #000;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+body {
+  font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial,
+               "Liberation Sans", "DejaVu Sans", system-ui, sans-serif;
+  font-size: 9.6pt;
+  line-height: 1.3;
+  text-rendering: optimizeLegibility;
+  font-variant-ligatures: none;
+}
+
+.folha {
+  width: 182mm;          /* A4 (210mm) menos as margens de 14mm */
+  margin: 0 auto;
+  padding: 14mm 0;
+}
+
+/* ---------------------------------------------------------------- cabecalho */
+
+.nome {
+  font-size: 19.5pt;
+  font-weight: 700;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.12;
+}
+
+.cargo {
+  font-size: 10.2pt;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.015em;
+  margin-top: 2.5pt;
+}
+
+.contato {
+  font-size: 8.6pt;
+  text-align: center;
+  margin-top: 1.6pt;
+  line-height: 1.25;
+}
+
+.disp {
+  font-size: 8pt;
+  text-align: center;
+  margin-top: 2.4pt;
+  line-height: 1.25;
+}
+
+/* ------------------------------------------------------------------ secoes */
+
+.secao { margin-top: 8.5pt; }
+
+.secao h2 {
+  font-size: 9.8pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  border-bottom: 0.9pt solid #000;
+  padding-bottom: 1.6pt;
+  margin-bottom: 4pt;
+}
+
+.bloco {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-top: 4.5pt;
+}
+
+.bloco:first-of-type { margin-top: 0; }
+
+/* linha de cargo/instituicao com a data alinhada a direita */
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8pt;
+}
+
+.head-txt { flex: 1 1 auto; }
+
+.head-data {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  text-align: right;
+  font-size: 9pt;
+}
+
+.head-data em, .desc em, .linha em, .para em { font-style: normal; }
+
+.linha { line-height: 1.34; }
+
+.desc {
+  margin-top: 1pt;
+  text-align: justify;
+}
+
+.para {
+  text-align: justify;
+  line-height: 1.33;
+}
+
+/* ---------------------------------------------------------------- marcadores */
+
+ul {
+  list-style: none;
+  margin-top: 1.6pt;
+}
+
+li {
+  position: relative;
+  padding-left: 8.5pt;
+  margin-top: 1pt;
+  line-height: 1.28;
+}
+
+li::before {
+  content: "\2022";
+  position: absolute;
+  left: 1pt;
+  top: 0;
+}
+
+li:first-child { margin-top: 0; }
+
+/* --------------------------------------------------------------- impressao */
+
+@media print {
+  .folha {
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+  .secao h2 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+  .head {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+  h1, h2 { break-inside: avoid; page-break-inside: avoid; }
+}
+
+@media screen {
+  body { background: #eceff1; padding: 8mm 0; }
+  .folha {
+    background: #fff;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.18);
+    padding: 14mm;
+  }
+}
+</style>
+</head>
+<body>
+<main class="folha">
+<header>
+<h1 class="nome">RAMOM SIQUEIRA CLEMENTE DA SILVA</h1>
+<p class="cargo">Estudante de Tecnologia (CST) | Desenvolvimento, Análise de Sistemas e Automação</p>
+<p class="contato">Barueri, SP · ramomsiqueira2000@hotmail.com · (11) 99120-9431</p>
+<p class="contato">linkedin.com/in/ramom-clemente · github.com/ClementeRamom777 · clementeramom777.github.io</p>
+<p class="disp">Conclusão prevista: 2028.2 · Curso de 5 semestres · Disponibilidade: 6h diárias · São Paulo e região · Presencial / Híbrido / Remoto</p>
+</header>
+<section class="secao"><h2>OBJETIVO</h2><div class="bloco"><p class="para">Programa de Estágio em Tecnologia — Desenvolvimento, Análise de Sistemas, Automação/RPA ou Processos.</p></div></section>
+<section class="secao"><h2>APRESENTAÇÃO</h2><div class="bloco"><p class="para">Sou estudante de Tecnologia e chego ao estágio com uma vivência prévia que considero ponto de partida, não de chegada: quase cinco anos na indústria gráfica, do chão de produção às rotinas de TI — operação de ERP, indicadores, documentação de processos e automação de fluxos. Isso me deu algo concreto para trazer no primeiro dia: entendo processo de negócio pela ponta, sei o que é atender um usuário com a produção parada, e sei traduzir necessidade operacional em requisito.</p></div><div class="bloco"><p class="para">Hoje escrevo software. Trabalho com especificação técnica escrita antes do código, teste automatizado e documentação honesta do que foi feito e do que ainda não foi. <strong>A escolha pelo estágio é consciente e não é um recuo:</strong> prefiro construir fundamento sólido ao lado de gente experiente a acelerar título sem base. Estudo de forma disciplinada e contínua.</p></div></section>
+<section class="secao"><h2>PROJETO</h2><div class="bloco"><div class="head"><div class="head-txt"><strong>Portfólio profissional</strong> — site multilíngue · clementeramom777.github.io</div><div class="head-data">2026</div></div><ul><li>HTML, CSS e JavaScript puros, sem frameworks, publicado via GitHub Pages</li><li>Três idiomas com alternância em tempo real, HTML semântico e layout responsivo</li></ul></div></section>
+<section class="secao"><h2>FORMAÇÃO ACADÊMICA</h2><div class="bloco"><div class="head"><div class="head-txt"><strong>Tecnologia em Jogos Digitais — Desenvolvimento de Software (CST)</strong> · UNINTER</div><div class="head-data">jul/2026 – 2028.2</div></div><p class="desc">Curso superior na área de TI. Grade: lógica e algoritmos, orientação a objetos, banco de dados relacional, desenvolvimento web, métodos ágeis, UX/UI e otimização de desempenho, com projetos interdisciplinares a cada ciclo. Inclui trilha de certificações Cisco, Amazon, Google e Oracle.</p></div><div class="bloco"><div class="head"><div class="head-txt"><strong>Aprendizagem Industrial — Produção Gráfica / Prepress e Digital Imaging</strong> · SENAI "José Ephim Mindlin"</div><div class="head-data">jun/2021 – jun/2023</div></div><p class="desc">Formação em pré-impressão, fluxos de produção e tratamento de imagem digital.</p></div></section>
+<section class="secao"><h2>COMPETÊNCIAS</h2><div class="bloco"><p class="linha"><strong>Desenvolvimento:</strong> Python · JavaScript, HTML e CSS · C# · Banco de dados relacional · Testes automatizados (pytest) · Git, GitHub e GitHub Pages</p></div><div class="bloco"><p class="linha"><strong>Automação:</strong> Enfocus Switch (automação de workflows) · Python aplicado a rotinas · Agendamento e tratamento de arquivos</p></div><div class="bloco"><p class="linha"><strong>ERP e processos:</strong> ERP E-calc (operação, ordens de serviço, rastreabilidade) · Mapeamento de fluxos · Documentação (POP) · Indicadores e relatórios gerenciais · Triagem de demandas · Melhoria contínua</p></div><div class="bloco"><p class="linha"><strong>Banco e planilhas:</strong> Excel Avançado (certificado, 57h) · SQLite · pandas · openpyxl · SQL (em formação)</p></div><div class="bloco"><p class="linha"><strong>Engenharia:</strong> Gestão de segredos · Logs auditáveis · Validação de entrada · Especificação técnica antes do código · Documentação</p></div><div class="bloco"><p class="linha"><strong>Ambientes:</strong> Windows · Linux / WSL Ubuntu (terminal, permissões) · Pacote Office · Adobe Creative Cloud</p></div><div class="bloco"><p class="linha"><strong>Idiomas:</strong> Português nativo · Inglês básico técnico (leitura de documentação) · Espanhol básico</p></div></section>
+<section class="secao"><h2>EXPERIÊNCIA PROFISSIONAL</h2><div class="bloco"><div class="head"><div class="head-txt"><strong>Analista de Sistemas Jr.</strong> · Gráfica Forma Certa Digital — Barueri, SP</div><div class="head-data">dez/2024 – jun/2026</div></div><ul><li>Manutenção e extensão de 5 fluxos automatizados no Enfocus Switch, com ajustes em scripts Python — redução de etapas manuais e do risco de erro</li><li>Construção e manutenção de relatórios e indicadores operacionais em Excel avançado, usados como apoio à gestão</li><li>Suporte ao ERP E-calc: registro, triagem e acompanhamento de demandas de produção e gestão até a resolução</li><li>Documentação de procedimentos internos e fluxos operacionais, mantendo o conhecimento acessível à equipe</li><li>Proposição e implementação de melhorias de processo em POD (Print on Demand), com foco em padronização</li></ul></div><div class="bloco"><div class="head"><div class="head-txt"><strong>Assistente de Orçamento</strong> · Gráfica Forma Certa Digital — Barueri, SP</div><div class="head-data">mar/2024 – dez/2024</div></div><ul><li>Tradução de necessidades comerciais do cliente em especificações técnicas e estimativas de custo</li><li>Abertura e acompanhamento de Ordens de Serviço no ERP E-calc, garantindo rastreabilidade de cada etapa</li><li>Controle de prazos e do fluxo de informação entre comercial e produção, reduzindo retrabalho</li></ul></div><div class="bloco"><div class="head"><div class="head-txt"><strong>Trajetória inicial — Produção Industrial e Gráfica</strong></div><div class="head-data">fev/2020 – mar/2024</div></div><ul><li>Auxiliar de Acabamento · Gráfica Forma Certa Digital (jan/2024 – mar/2024) · Assistente de Produção · Antilhas Embalagens (ago/2023 – out/2023) · Assistente de Produção, Aprendiz · Brasilgráfica S.A. (jul/2021 – jun/2023) · Assistente de Produção, Aprendiz · Espro (fev/2020 – mar/2021)</li><li>Quatro anos em produção, controle de qualidade e pré-impressão — a base que hoje sustenta minha leitura de processo</li></ul></div></section>
+<section class="secao"><h2>CERTIFICAÇÕES — 33 concluídas (Alura, Hashtag Treinamentos e SENAI)</h2><div class="bloco"><ul><li><strong>Hashtag Treinamentos:</strong> Excel Avançado — Análise de Dados (57h, verificável) · Excel Intermediário (23h)</li><li><strong>Alura:</strong> Lógica de Programação · SQL · HTML e CSS · Git e GitHub · Linux (terminal, permissões) · C# e .NET</li><li><strong>Em andamento:</strong> Formação Dev Full Stack com IA (Alura) · Python · Fundamentos de redes (CiberEducação Cisco)</li></ul></div></section>
+</main>
+</body>
+</html>
