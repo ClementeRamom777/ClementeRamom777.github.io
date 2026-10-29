@@ -191,7 +191,7 @@ CSS = """
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-@page { size: A4; margin: 14mm; }
+@page { size: A4; margin: 11mm; }
 
 html, body {
   background: #fff;
@@ -203,16 +203,16 @@ html, body {
 body {
   font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial,
                "Liberation Sans", "DejaVu Sans", system-ui, sans-serif;
-  font-size: 9.6pt;
-  line-height: 1.3;
+  font-size: 9.5pt;
+  line-height: 1.28;
   text-rendering: optimizeLegibility;
   font-variant-ligatures: none;
 }
 
 .folha {
-  width: 182mm;          /* A4 (210mm) menos as margens de 14mm */
+  width: 188mm;          /* A4 (210mm) menos as margens de 11mm */
   margin: 0 auto;
-  padding: 14mm 0;
+  padding: 11mm 0;
 }
 
 /* ---------------------------------------------------------------- cabecalho */
@@ -231,26 +231,26 @@ body {
   font-weight: 600;
   text-align: center;
   letter-spacing: 0.015em;
-  margin-top: 2.5pt;
+  margin-top: 2pt;
 }
 
 .contato {
   font-size: 8.6pt;
   text-align: center;
-  margin-top: 1.6pt;
+  margin-top: 1pt;
   line-height: 1.25;
 }
 
 .disp {
   font-size: 8pt;
   text-align: center;
-  margin-top: 2.4pt;
+  margin-top: 1.6pt;
   line-height: 1.25;
 }
 
 /* ------------------------------------------------------------------ secoes */
 
-.secao { margin-top: 8.5pt; }
+.secao { margin-top: 4pt; }
 
 .secao h2 {
   font-size: 9.8pt;
@@ -258,14 +258,14 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.09em;
   border-bottom: 0.9pt solid #000;
-  padding-bottom: 1.6pt;
-  margin-bottom: 4pt;
+  padding-bottom: 1pt;
+  margin-bottom: 2.4pt;
 }
 
 .bloco {
   break-inside: avoid;
   page-break-inside: avoid;
-  margin-top: 4.5pt;
+  margin-top: 2.8pt;
 }
 
 .bloco:first-of-type { margin-top: 0; }
@@ -289,30 +289,24 @@ body {
 
 .head-data em, .desc em, .linha em, .para em { font-style: normal; }
 
-.linha { line-height: 1.34; }
-
 .desc {
   margin-top: 1pt;
   text-align: justify;
 }
 
-.para {
-  text-align: justify;
-  line-height: 1.33;
-}
+.para { text-align: justify; }
 
 /* ---------------------------------------------------------------- marcadores */
 
 ul {
   list-style: none;
-  margin-top: 1.6pt;
+  margin-top: 0.9pt;
 }
 
 li {
   position: relative;
   padding-left: 8.5pt;
-  margin-top: 1pt;
-  line-height: 1.28;
+  margin-top: 0.3pt;
 }
 
 li::before {
@@ -348,7 +342,7 @@ li:first-child { margin-top: 0; }
   .folha {
     background: #fff;
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.18);
-    padding: 14mm;
+    padding: 11mm;
   }
 }
 """
