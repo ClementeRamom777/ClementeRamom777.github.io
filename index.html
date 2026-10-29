@@ -124,6 +124,7 @@
   .card-links a{color:var(--green);border-bottom:1px solid transparent;transition:.2s}
   .card-links a:hover{border-bottom-color:var(--green)}
   .card-links span{color:var(--txt-3)}
+  .proj-note{margin-top:22px;font-size:13.5px;color:var(--txt-3);max-width:76ch}
 
   .contact{text-align:center}
   .contact h2{font-size:clamp(24px,3.4vw,34px);font-weight:600;margin-bottom:14px}
@@ -380,7 +381,7 @@
     <div class="sec-head">
       <p class="sec-num" aria-hidden="true">04</p>
       <h2 id="projetos-h" data-i18n="proj.h">Projetos</h2>
-      <p data-i18n="proj.p">Seis projetos. Os três primeiros formam uma tese: cobrir o processo produtivo do orçamento à entrega, a partir de dores reais que vivi na indústria gráfica, com mecânica aplicável a qualquer produção — dados fictícios, decisões técnicas documentadas e código escrito para ser explicado. Os outros três são menores e assumidos como tal: uma ferramenta de linha de comando e dois exercícios de lógica e JavaScript, feitos durante o estudo.</p>
+      <p data-i18n="proj.p">Quatro projetos. O Painel de Produção Industrial e o Verdão Ops são os de peso — pipeline que trata planilha suja com validação, banco e relatório auditável, e ferramenta de linha de comando que consome API com cache resiliente e credencial protegida —, ambos com decisões técnicas documentadas e código escrito para ser explicado. Os outros dois são exercícios de lógica e JavaScript feitos durante o estudo, e estão aqui como registro do percurso, não como demonstração de engenharia.</p>
     </div>
     <div class="proj-grid">
 
@@ -390,29 +391,9 @@
           <span class="tag done" data-i18n="tag.done">concluído</span>
         </div>
         <img class="card-img" src="img_painel_producao.png" alt="Painel de Produção Industrial" loading="lazy">
-        <p data-i18n="proj.p1d">Lê planilhas de produção com a sujeira que aparece de verdade — cabeçalho fora de lugar, datas em quatro formatos, nomes de máquina divergentes, duplicatas —, valida, grava em banco e gera painel, relatório Excel e CSV auditável. Última execução: 736 linhas lidas, 678 gravadas, 5,71% rejeitadas com motivo.</p>
+        <p data-i18n="proj.p1d">Lê planilhas de produção com a sujeira que aparece de verdade — cabeçalho fora de lugar, datas em quatro formatos, nomes de máquina divergentes, duplicatas —, valida, grava em banco e gera painel, relatório Excel e CSV auditável. Execução de referência: 736 linhas lidas, 678 gravadas, 5,71% rejeitadas com motivo registrado — e 338 testes cobrindo as funções críticas de cada camada.</p>
         <ul class="chips"><li class="chip">Python</li><li class="chip">pandas</li><li class="chip">SQLite</li><li class="chip">matplotlib</li><li class="chip">pytest</li></ul>
-        <div class="card-links"><span data-i18n="proj.review">repositório em revisão · link em breve</span></div>
-      </article>
-
-      <article class="card">
-        <div class="card-top">
-          <h3 data-i18n="proj.p2t">Motor de Orçamento de Produção</h3>
-          <span class="tag plan" data-i18n="tag.plan">planejado</span>
-        </div>
-        <p data-i18n="proj.p2d">Calcula custo e preço de uma ordem de produção a partir da especificação técnica — material, quantidade, processos e acabamento — usando tabela de regras externa. Regra de negócio fora do código: alterar preço não exige alterar programa.</p>
-        <ul class="chips"><li class="chip">Python</li><li class="chip">openpyxl</li><li class="chip" data-i18n="proj.rules">Regras externas</li></ul>
-        <div class="card-links"><span data-i18n="proj.soon">repositório em breve</span></div>
-      </article>
-
-      <article class="card">
-        <div class="card-top">
-          <h3 data-i18n="proj.p3t">Validador Automático de Arquivos</h3>
-          <span class="tag plan" data-i18n="tag.plan">planejado</span>
-        </div>
-        <p data-i18n="proj.p3d">Robô que vigia uma pasta de entrada, valida cada arquivo contra as regras de produção e separa aprovados de reprovados, registrando o motivo de cada reprovação. Caso de uso: pré-flight gráfico (páginas, dimensões, sangria, resolução, cor e fontes).</p>
-        <ul class="chips"><li class="chip">Python</li><li class="chip">PyMuPDF</li><li class="chip">RPA</li><li class="chip">Logging</li></ul>
-        <div class="card-links"><span data-i18n="proj.soon">repositório em breve</span></div>
+        <div class="card-links"><a href="https://github.com/ClementeRamom777/painel-producao" target="_blank" rel="noopener">GitHub →</a></div>
       </article>
 
       <article class="card">
@@ -446,6 +427,7 @@
       </article>
 
     </div>
+    <p class="proj-note" data-i18n="proj.building">Em construção: Motor de Orçamento de Produção — API que calcula custo e preço de uma ordem a partir da especificação técnica, com regras de negócio em tabela externa.</p>
   </div>
 </section>
 
@@ -538,19 +520,14 @@ var EN = {
   'stack.secret':'Secret management','stack.logs':'Auditable logs','stack.valid':'Input validation','stack.doc':'Documentation',
   'stack.prompt':'Prompt engineering','stack.agents':'AI agents','stack.aiflow':'AI in workflows',
   'proj.h':'Projects',
-  'proj.p':'Six projects. The first three form a thesis: covering the production process from quote to delivery, built from real pain points I lived in the printing industry, with mechanics that apply to any production line — fictional data, documented technical decisions and code written to be explained. The other three are smaller and owned as such: a command-line tool and two logic and JavaScript exercises, built while studying.',
+  'proj.p':'Four projects. The Industrial Production Dashboard and Verdão Ops are the substantial ones — a pipeline that handles messy spreadsheets with validation, a database and an auditable report, and a command-line tool that consumes an API with resilient caching and protected credentials —, both with documented technical decisions and code written to be explained. The other two are logic and JavaScript exercises built while studying, and they are here as a record of the path, not as a demonstration of engineering.',
   'proj.p1t':'Industrial Production Dashboard',
-  'proj.p1d':'Reads production spreadsheets with real-world mess — misplaced headers, dates in four formats, mismatched machine names, duplicates —, validates, stores in a database and generates a dashboard, an Excel report and an auditable CSV. Last run: 736 rows read, 678 stored, 5.71% rejected with a reason.',
-  'proj.p2t':'Production Quoting Engine',
-  'proj.p2d':'Calculates cost and price of a production order from its technical specification — material, quantity, processes and finishing — using an external rules table. Business rules live outside the code: changing a price does not require changing the program.',
-  'proj.p3t':'Automated File Validator',
-  'proj.p3d':'A bot that watches an input folder, validates each file against production rules and sorts approved from rejected, logging the reason for every rejection. Use case: print preflight (pages, dimensions, bleed, resolution, color and fonts).',
+  'proj.p1d':'Reads production spreadsheets with real-world mess — misplaced headers, dates in four formats, mismatched machine names, duplicates —, validates, stores in a database and generates a dashboard, an Excel report and an auditable CSV. Reference run: 736 rows read, 678 stored, 5.71% rejected with a logged reason — and 338 tests covering the critical functions of each layer.',
   'proj.p4d':'Command-line tool that queries Brazilian league data through an API: upcoming matches, results and standings. Personal project focused on API consumption, resilient local caching and credential protection.',
   'proj.p5d':'Web guessing game with speech recognition, built during programming-logic training. First hands-on contact with DOM manipulation and events.',
   'proj.p6d':'Web app that draws random numbers without repetition within a user-defined range, with input validation.',
-  'proj.rules':'External rules','proj.soon':'repository coming soon',
-  'proj.review':'repository under review · link coming soon',
-  'tag.dev':'in progress','tag.plan':'planned','tag.done':'completed',
+  'proj.building':'In progress: Production Quoting Engine — an API that calculates the cost and price of an order from its technical specification, with business rules in an external table.',
+  'tag.done':'completed',
   'ct.h':'Where to find me',
   'ct.p':'Open to junior roles in Development, Systems Analysis, Automation/RPA or Processes, and to Technology Internship Programmes — in any industry where manual work still costs time and creates errors.',
   'foot.built':'Built with HTML, CSS and JavaScript · no frameworks'
@@ -606,19 +583,14 @@ var ES = {
   'stack.secret':'Gestión de secretos','stack.logs':'Registros auditables','stack.valid':'Validación de entrada','stack.doc':'Documentación',
   'stack.prompt':'Ingeniería de prompts','stack.agents':'Agentes de IA','stack.aiflow':'IA en flujos de trabajo',
   'proj.h':'Proyectos',
-  'proj.p':'Seis proyectos. Los tres primeros forman una tesis: cubrir el proceso productivo del presupuesto a la entrega, a partir de dolores reales que viví en la industria gráfica, con mecánica aplicable a cualquier producción — datos ficticios, decisiones técnicas documentadas y código escrito para ser explicado. Los otros tres son menores y asumidos como tales: una herramienta de línea de comandos y dos ejercicios de lógica y JavaScript, hechos durante el estudio.',
+  'proj.p':'Cuatro proyectos. El Panel de Producción Industrial y Verdão Ops son los de peso — pipeline que trata planillas sucias con validación, base de datos e informe auditable, y herramienta de línea de comandos que consume una API con caché resiliente y credenciales protegidas —, ambos con decisiones técnicas documentadas y código escrito para ser explicado. Los otros dos son ejercicios de lógica y JavaScript hechos durante el estudio, y están aquí como registro del recorrido, no como demostración de ingeniería.',
   'proj.p1t':'Panel de Producción Industrial',
-  'proj.p1d':'Lee planillas de producción con la suciedad que aparece de verdad — encabezado fuera de lugar, fechas en cuatro formatos, nombres de máquina divergentes, duplicados —, valida, guarda en base de datos y genera panel, informe Excel y CSV auditable. Última ejecución: 736 filas leídas, 678 guardadas, 5,71% rechazadas con motivo.',
-  'proj.p2t':'Motor de Presupuesto de Producción',
-  'proj.p2d':'Calcula costo y precio de una orden de producción a partir de la especificación técnica — material, cantidad, procesos y acabado — usando una tabla de reglas externa. La regla de negocio vive fuera del código: cambiar un precio no exige cambiar el programa.',
-  'proj.p3t':'Validador Automático de Archivos',
-  'proj.p3d':'Robot que vigila una carpeta de entrada, valida cada archivo contra las reglas de producción y separa aprobados de rechazados, registrando el motivo de cada rechazo. Caso de uso: preflight gráfico (páginas, dimensiones, sangrado, resolución, color y fuentes).',
+  'proj.p1d':'Lee planillas de producción con la suciedad que aparece de verdad — encabezado fuera de lugar, fechas en cuatro formatos, nombres de máquina divergentes, duplicados —, valida, guarda en base de datos y genera panel, informe Excel y CSV auditable. Ejecución de referencia: 736 filas leídas, 678 guardadas, 5,71% rechazadas con motivo registrado — y 338 pruebas que cubren las funciones críticas de cada capa.',
   'proj.p4d':'Herramienta de línea de comandos que consulta datos de la liga brasileña vía API: próximos partidos, resultados y tabla de posiciones. Proyecto personal enfocado en consumo de API, caché local resiliente y protección de credenciales.',
   'proj.p5d':'Juego web de adivinanza con reconocimiento de voz, hecho durante la formación en lógica de programación. Primer contacto práctico con manipulación del DOM y eventos.',
   'proj.p6d':'Aplicación web que sortea números sin repetición dentro de un rango definido por el usuario, con validación de entrada.',
-  'proj.rules':'Reglas externas','proj.soon':'repositorio próximamente',
-  'proj.review':'repositorio en revisión · enlace próximamente',
-  'tag.dev':'en desarrollo','tag.plan':'planificado','tag.done':'concluido',
+  'proj.building':'En construcción: Motor de Presupuesto de Producción — API que calcula costo y precio de una orden a partir de la especificación técnica, con reglas de negocio en tabla externa.',
+  'tag.done':'concluido',
   'ct.h':'Dónde encontrarme',
   'ct.p':'Abierto a posiciones júnior en Desarrollo, Análisis de Sistemas, Automatización/RPA o Procesos, y a Programas de Prácticas en Tecnología — en cualquier industria donde el proceso manual aún cueste tiempo y genere errores.',
   'foot.built':'Construido con HTML, CSS y JavaScript · sin frameworks'
